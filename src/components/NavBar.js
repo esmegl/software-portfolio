@@ -50,8 +50,8 @@ export const NavBar = () => {
           </Nav>
           <span className="navbar-text">
           	<div className="social-icon">
-          		<a href="#"><img src={linkedin} alt=""/></a>
-          		<a href="#"><img src={github} alt=""/></a>
+          		<a href="https://www.linkedin.com/in/esmeralda-gallardo-8a4977215/"><img src={linkedin} alt=""/></a>
+          		<a href="https://github.com/esmegl"><img src={github} alt=""/></a>
           		<a href="#"><img src={navIcon3} alt=""/></a>
           	</div>
           	<button className="vvd" onClick={ () => console.log('Connect')}>

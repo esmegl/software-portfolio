@@ -5,6 +5,8 @@ import project1 from "../assets/images/project-img1.png";
 import project2 from "../assets/images/project-img2.png";
 import lovebets from "../assets/images/lovebets_home.png";
 import colorSharp2 from "../assets/images/color-sharp2.png";
+import 'animate.css';
+import TrackVisibility from 'react-on-screen';
 
 export const Projects = () => {
 
@@ -31,8 +33,14 @@ export const Projects = () => {
 			<Container>
 				<Row>
 					<Col>
-						<h2>Projects</h2>
-						<p>Lorem ipsum</p>
+						<TrackVisibility>
+						{({ isVisible }) => 
+							<div className={isVisible ? "animate__animated animate__bounce" : ""}>
+								<h2>Projects</h2>
+								<p>Lorem ipsum</p>
+							</div>
+						}
+						</TrackVisibility>	
 					</Col>
 				</Row>
 				<Row>
