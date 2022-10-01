@@ -160,8 +160,8 @@ span.navbar-text {
     margin-left: 14px;
 }
 .social-icon a {
-    width: 42px;
-    height: 42px;
+    width: 50px;
+    height: 50px;
     background: rgba(217, 217, 217, 0.1);
     display: inline-flex;
     border-radius: 50%;
@@ -179,7 +179,7 @@ span.navbar-text {
     background-color: #ffffff;
     border-radius: 50%;
     transform: scale(0);
-  transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 .social-icon a:hover::before {
     transform: scale(1);

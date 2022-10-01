@@ -1,9 +1,7 @@
 import { useState, useEffect } from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import logo from '../assets/images/logo.svg';
-import linkedin from '../assets/images/linkedin.svg';
-import github from '../assets/images/github.png';
-import navIcon3 from '../assets/images/nav-icon3.svg';
+import { Icon } from '@iconify/react';
 // import { HashLink } from 'react-router-hash-link';
 // import {
 //   BrowserRouter as Router
@@ -50,9 +48,9 @@ export const NavBar = () => {
           </Nav>
           <span className="navbar-text">
           	<div className="social-icon">
-          		<a href="https://www.linkedin.com/in/esmeralda-gallardo-8a4977215/"><img src={linkedin} alt=""/></a>
-          		<a href="https://github.com/esmegl"><img src={github} alt=""/></a>
-          		<a href="#"><img src={navIcon3} alt=""/></a>
+          		<a href="https://www.linkedin.com/in/esmeralda-gallardo-8a4977215/"><Icon icon="akar-icons:linkedin-box-fill" color="white" width="30" height="30"/></a>
+          		<a href="https://github.com/esmegl"><Icon icon="akar-icons:github-fill" color="white" width="30" height="30" /></a>
+          		<a href="https://www.hackerrank.com/gallardo_esmera1?hr_r=1"><Icon icon="cib:hackerrank" color="white" width="30" height="30" /></a>
           	</div>
           	<button className="vvd" onClick={ () => console.log('Connect')}>
           		<span> Let's Connect!</span>
