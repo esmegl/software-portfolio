@@ -2,9 +2,18 @@ import Carousel from "react-multi-carousel";
 import { Container, Row, Col } from "react-bootstrap";
 import "react-multi-carousel/lib/styles.css";
 
-import meter1 from "../assets/images/meter1.svg";
-import meter2 from "../assets/images/meter2.svg";
-import meter3 from "../assets/images/meter3.svg";
+import angular from "../assets/images/angular.png";
+import cplus from "../assets/images/c-.png";
+import css from "../assets/images/css.png";
+import docker from "../assets/images/docker.png";
+import git from "../assets/images/git.png";
+import java from "../assets/images/java.png";
+import js from "../assets/images/js.png";
+import py from "../assets/images/python.png";
+import springboot from "../assets/images/springboot.png";
+import sql from "../assets/images/sql-server.png";
+import vue from "../assets/images/vue.png";
+import html from "../assets/images/html.png";
 import colorSharp from "../assets/images/color-sharp.png";
 
 export const Skills = () => {
@@ -34,26 +43,61 @@ export const Skills = () => {
 					<Col>
 						<div className="skill-bx">
 							<h2>Skills</h2>
-							<p>Lorem ipsum text</p>
 							<Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider"> 
 								<div className="item">
-									<img src={meter1} alt="Image"/>
-									<h5>Web Development</h5>
+									<img src={py} alt="Python"/>
+									<h5>Python</h5>
 								</div>
 								<div className="item">
-									<img src={meter2} alt="Image"/>
-									<h5>Brand Identify</h5>
+									<img src={java} alt="Java"/>
+									<h5>Java</h5>
 								</div>
 								<div className="item">
-									<img src={meter3} alt="Image"/>
-									<h5>Logo Design</h5>
+									<img src={cplus} alt="CPlus"/>
+									<h5>C++</h5>
+								</div>
+								<div className="item">
+									<img src={sql} alt="SQL"/>
+									<h5>SQL</h5>
+								</div>
+								<div className="item">
+									<img src={js} alt="JavaScript"/>
+									<h5>JavaScript</h5>
+								</div>
+								<div className="item">
+									<img src={html} alt="HTML"/>
+									<h5>HTML</h5>
+								</div>
+								<div className="item">
+									<img src={css} alt="CSS"/>
+									<h5>CSS</h5>
+								</div>
+								<div className="item">
+									<img src={vue} alt="Vue"/>
+									<h5>Vue</h5>
+								</div>
+								<div className="item">
+									<img src={angular} alt="Angular"/>
+									<h5>Angular</h5>
+								</div>
+								<div className="item">
+									<img src={springboot} alt="SpringBoot"/>
+									<h5>Spring Boot</h5>
+								</div>
+								<div className="item">
+									<img src={git} alt="Git"/>
+									<h5>Git</h5>
+								</div>
+								<div className="item">
+									<img src={docker} alt="Docker"/>
+									<h5>Docker</h5>
 								</div>
 							</Carousel>
 						</div>
 					</Col>
 				</Row>
 			</Container>
-			<img className="background-image-left" src={colorSharp}/>
+			<img className="background-image-left" src={colorSharp} alt=""/>
 		</section>
 	)
 
