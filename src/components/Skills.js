@@ -13,7 +13,9 @@ import py from "../assets/images/python.png";
 import springboot from "../assets/images/springboot.png";
 import sql from "../assets/images/sql-server.png";
 import vue from "../assets/images/vue.png";
+import react from "../assets/images/react.png";
 import html from "../assets/images/html.png";
+import mariadb from "../assets/images/mariadb.png";
 import colorSharp from "../assets/images/color-sharp.png";
 
 export const Skills = () => {
@@ -81,6 +83,10 @@ export const Skills = () => {
 									<h5>Angular</h5>
 								</div>
 								<div className="item">
+									<img src={react} alt="React"/>
+									<h5>React</h5>
+								</div>
+								<div className="item">
 									<img src={springboot} alt="SpringBoot"/>
 									<h5>Spring Boot</h5>
 								</div>
@@ -91,6 +97,10 @@ export const Skills = () => {
 								<div className="item">
 									<img src={docker} alt="Docker"/>
 									<h5>Docker</h5>
+								</div>
+								<div className="item">
+									<img src={mariadb} alt="MariaDB"/>
+									<h5>MariaDB</h5>
 								</div>
 							</Carousel>
 						</div>
