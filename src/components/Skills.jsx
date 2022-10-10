@@ -44,7 +44,7 @@ export const Skills = () => {
 				<Row>
 					<Col>
 						<div className="skill-bx">
-							<h2>Skills</h2>
+							<h2>Knowledge</h2>
 							<Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider"> 
 								<div className="item">
 									<img src={py} alt="Python"/>
