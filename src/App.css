@@ -160,11 +160,11 @@ span.navbar-text {
     margin-left: 14px;
 }
 .social-icon a {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     background: rgba(217, 217, 217, 0.1);
     display: inline-flex;
-    border-radius: 50%;
+    border-radius: 30%;
     margin-right: 6px;
     align-items: center;
     justify-content: center;
@@ -177,7 +177,7 @@ span.navbar-text {
     height: 42px;
     position: absolute;
     background-color: #ffffff;
-    border-radius: 50%;
+    border-radius: 30%;
     transform: scale(0);
     transition: 0.3s ease-in-out;
 }
@@ -344,11 +344,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Skills CSS ************/
 .skills {
-  padding: 0 0 50px 0;
   position: relative;
 }
 .skill-bx {
-  background: #151515;
+  background: #121213;
   border-radius: 64px;
   text-align: center;
   padding: 60px 50px;
@@ -357,7 +356,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .skill-bx h2 {
   font-size: 45px;
   font-weight: 500;
-  padding-bottom: 50px;
+  padding-bottom: 20px;
 }
 .skill p {
     color: #B8B8B8;
@@ -507,6 +506,15 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 35%;
   right: 0;
   z-index: -4;
+}
+
+.proj-imgbx video {
+  object-fit: cover;
+  width: 100%;
+}
+
+.proj-txtx Button {
+  margin: 5px 0;
 }
 
 /************ Contact CSS ************/
