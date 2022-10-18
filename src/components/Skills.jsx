@@ -16,7 +16,6 @@ import vue from "../assets/images/vue.png";
 import react from "../assets/images/react.png";
 import html from "../assets/images/html.png";
 import mariadb from "../assets/images/mariadb.png";
-// import colorSharp from "../assets/images/color-sharp.png";
 
 export const Skills = () => {
 	const responsive = {
@@ -107,7 +106,6 @@ export const Skills = () => {
 					</Col>
 				</Row>
 			</Container>
-			{/*<img className="background-image-left" src={colorSharp} alt=""/>*/}
 		</section>
 	)
 
