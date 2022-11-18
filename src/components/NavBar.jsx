@@ -46,7 +46,8 @@ export const NavBar = () => {
           	<div className="social-icon">
           		<a href="https://www.linkedin.com/in/esmeralda-gallardo-8a4977215/"><Icon icon="akar-icons:linkedin-box-fill" color="white" width="25" height="25"/></a>
           		<a href="https://github.com/esmegl"><Icon icon="akar-icons:github-fill" color="white" width="25" height="25" /></a>
-          		<a href="https://www.hackerrank.com/gallardo_esmera1?hr_r=1"><Icon icon="cib:hackerrank" color="white" width="25" height="25" /></a>
+          		<a href="https://leetcode.com/emerald_21/"><Icon icon="simple-icons:leetcode" color="white" width="25" height="25" /></a>
+              <a href="https://www.hackerrank.com/gallardo_esmera1?hr_r=1"><Icon icon="cib:hackerrank" color="white" width="25" height="25" /></a>
           	</div>
 {/*          	<button className="vvd" onClick={ () => console.log('Connect')}>
           		<span> Let's Connect!</span>

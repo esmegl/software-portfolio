@@ -16,7 +16,7 @@ export const Banner = () => {
 		let i = loopNum % toRotate.length;
 		let fullText = toRotate[i];
 		let updatedText = isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1);
-		
+
 		setText(updatedText);
 
 		if (isDeleting) {
@@ -47,11 +47,11 @@ export const Banner = () => {
 				<Row className="align-items-center">
 					<Col xs={12} md={6} xl={7}>
 						<TrackVisibility>
-						{({ isVisible }) => 
+						{({ isVisible }) =>
 							<div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
 								<span className="tagline">Welcome!</span>
 								<h1>{`Hello! I'm Esmeralda `}<span className="wrap">{ text }</span></h1>
-							</div> 
+							</div>
 						}
 						</TrackVisibility>
 					</Col>

@@ -35,12 +35,12 @@ export const Projects = () => {
 				<Row>
 					<Col>
 						<TrackVisibility>
-						{({ isVisible }) => 
+						{({ isVisible }) =>
 							<div className={isVisible ? "animate__animated animate__bounce" : ""}>
 								<h2>Projects</h2>
 							</div>
 						}
-						</TrackVisibility>	
+						</TrackVisibility>
 					</Col>
 				</Row>
 				<Row>

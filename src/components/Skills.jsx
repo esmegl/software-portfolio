@@ -5,6 +5,7 @@ import "react-multi-carousel/lib/styles.css";
 import angular from "../assets/images/angular.png";
 import cplus from "../assets/images/c-.png";
 import css from "../assets/images/css.png";
+import django from "../assets/images/django.png";
 import docker from "../assets/images/docker.png";
 import git from "../assets/images/git.png";
 import java from "../assets/images/java.png";
@@ -44,7 +45,7 @@ export const Skills = () => {
 					<Col>
 						<div className="skill-bx">
 							<h2>Knowledge</h2>
-							<Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider"> 
+							<Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
 								<div className="item">
 									<img src={py} alt="Python"/>
 									<h5>Python</h5>
@@ -72,6 +73,10 @@ export const Skills = () => {
 								<div className="item">
 									<img src={css} alt="CSS"/>
 									<h5>CSS</h5>
+								</div>
+								<div className="item">
+									<img src={django} alt="Django"/>
+									<h5>Django</h5>
 								</div>
 								<div className="item">
 									<img src={vue} alt="Vue"/>
