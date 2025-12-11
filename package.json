@@ -1,42 +1,33 @@
 {
   "name": "software-portfolio",
-  "version": "0.1.0",
-  "homepage": "https://esmegl.github.io/software-portfolio",
   "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "animate.css": "^4.1.1",
-    "bootstrap": "^5.2.1",
-    "core-js": "^3.25.2",
-    "react": "^18.2.0",
-    "react-animated-css": "^1.2.1",
-    "react-bootstrap": "^2.5.0",
-    "react-bootstrap-icons": "^1.8.4",
-    "react-dom": "^18.2.0",
-    "react-modal": "^3.15.1",
-    "react-multi-carousel": "^2.8.2",
-    "react-on-screen": "^2.1.1",
-    "react-router-dom": "^6.4.2",
-    "react-router-hash-link": "^2.4.3",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
-  },
+  "version": "1.0.0",
+  "type": "module",
   "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "deploy": "gh-pages -d dist"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "dependencies": {
+    "@phosphor-icons/react": "^2.1.0",
+    "framer-motion": "^11.0.8",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scroll": "^1.9.0"
   },
+  "devDependencies": {
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.19",
+    "gh-pages": "^6.1.1",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.3",
+    "vite": "^5.2.0"
+  },
+  "homepage": "https://esmegl.github.io/software-portfolio",
   "browserslist": {
     "production": [
       ">0.2%",
@@ -48,9 +39,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "@iconify/react": "^4.0.0",
-    "gh-pages": "^4.0.0"
   }
 }
