@@ -1,26 +1,36 @@
-import { Container, Row, Col } from "react-bootstrap";
-import logo from "../assets/images/logo.svg";
-import { Icon } from '@iconify/react';
+import { LinkedinLogo, GithubLogo, Code, Terminal, Heart } from '@phosphor-icons/react';
+import { useLanguage } from '../context/LanguageContext';
 
 export const Footer = () => {
-  return (
-    <footer className="footer">
-      <Container>
-        <Row className="align-items-center">
-          <Col size={12} sm={6}>
-            <img src={logo} alt="Logo" />
-            <p>Copyright 2022 Esmeralda Gallardo. All Rights Reserved</p>
-          </Col>
-          <Col size={12} sm={6} className="text-center text-sm-end center">
-            <div className="social-icon">
-              <a href="https://www.linkedin.com/in/esmeralda-gallardo-8a4977215/"><Icon icon="akar-icons:linkedin-box-fill" color="white" width="25" height="25"/></a>
-              <a href="https://github.com/esmegl"><Icon icon="akar-icons:github-fill" color="white" width="25" height="25" /></a>
-              <a href="https://leetcode.com/emerald_21/"><Icon icon="simple-icons:leetcode" color="white" width="25" height="25" /></a>
-              <a href="https://www.hackerrank.com/gallardo_esmera1?hr_r=1"><Icon icon="cib:hackerrank" color="white" width="25" height="25" /></a>
+    const { t } = useLanguage();
+    return (
+        <footer className="py-8 bg-gray-900 border-t border-gray-800">
+            <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+
+                <div className="flex items-center space-x-2 text-gray-400 text-sm">
+                    <span>© {new Date().getFullYear()} Esmeralda Gallardo.</span>
+                    <span className="hidden md:inline">|</span>
+                    <span className="flex items-center">{t.footer.madeWith} <Heart size={16} weight="fill" className="text-red-500 mx-1" /> {t.language === 'es' ? 'y React' : 'and React'}</span>
+                </div>
+
+                <div className="flex space-x-6">
+                    <SocialLink href="https://www.linkedin.com/in/esmeralda-gallardo-8a4977215/" icon={<LinkedinLogo size={20} />} />
+                    <SocialLink href="https://github.com/esmegl" icon={<GithubLogo size={20} />} />
+                    <SocialLink href="https://leetcode.com/emerald_21/" icon={<Code size={20} />} />
+                    <SocialLink href="https://www.hackerrank.com/gallardo_esmera1?hr_r=1" icon={<Terminal size={20} />} />
+                </div>
             </div>
-          </Col>
-        </Row>
-      </Container>
-    </footer>
-  )
-}
+        </footer>
+    );
+};
+
+const SocialLink = ({ href, icon }) => (
+    <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-gray-400 hover:text-white transition-colors"
+    >
+        {icon}
+    </a>
+);
