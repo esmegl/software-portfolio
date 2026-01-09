@@ -26,7 +26,7 @@ export const Projects = () => {
             title: t.projects.items[2].title,
             description: t.projects.items[2].description,
             imgUrl: lovebets,
-            tags: ["Solidity", "React", "Smart Contracts"],
+            tags: ["C++", "Vue", "Smart Contracts"],
             link: "https://github.com/esmegl/love_bets_contracts",
             secondLink: "https://github.com/esmegl/lovebets-ui"
         },
