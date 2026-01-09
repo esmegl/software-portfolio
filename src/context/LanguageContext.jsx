@@ -57,7 +57,7 @@ const translations = {
                 },
                 {
                     title: "Lovebets",
-                    description: "Smart contract for marriage registration on the blockchain with a React UI."
+                    description: "Smart contract for marriage registration on the blockchain with a Vue UI."
                 }
             ],
             links: {
@@ -124,7 +124,7 @@ const translations = {
                 },
                 {
                     title: "Lovebets",
-                    description: "Contrato inteligente para registro de matrimonios en blockchain con una interfaz React."
+                    description: "Contrato inteligente para registro de matrimonios en blockchain con una interfaz Vue."
                 }
             ],
             links: {
