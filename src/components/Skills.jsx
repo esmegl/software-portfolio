@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 import { useLanguage } from "../context/LanguageContext";
+import { Code, Terminal, GitBranch, Gear, FileCode, Shield, FileText } from "@phosphor-icons/react";
 
 // Import images
 import angular from "../assets/images/angular.png";
 import cplus from "../assets/images/c-.png";
-import css from "../assets/images/css.png";
 import django from "../assets/images/django.png";
 import docker from "../assets/images/docker.png";
 import git from "../assets/images/git.png";
@@ -12,48 +12,66 @@ import java from "../assets/images/java.png";
 import js from "../assets/images/js.png";
 import py from "../assets/images/python.png";
 import springboot from "../assets/images/springboot.png";
-import sql from "../assets/images/sql-server.png";
 import vue from "../assets/images/vue.png";
 import react from "../assets/images/react.png";
-import html from "../assets/images/html.png";
 import mariadb from "../assets/images/mariadb.png";
 import kotlin from "../assets/images/kotlin.svg";
 import kafka from "../assets/images/kafka.svg";
 import postgres from "../assets/images/postgresql.svg";
+
+const SkillFallbackIcon = ({ name }) => {
+    const n = name.toLowerCase();
+    if (n.includes("c#") || n.includes(".net")) return <FileCode size={24} className="text-blue-400" />;
+    if (n.includes("github") || n.includes("actions")) return <GitBranch size={24} className="text-purple-400" />;
+    if (n.includes("teamcity")) return <Gear size={24} className="text-red-400" />;
+    if (n.includes("linux")) return <Terminal size={24} className="text-yellow-500" />;
+    if (n.includes("agile") || n.includes("scrum")) return <Gear size={24} className="text-green-400" />;
+    if (n.includes("doc")) return <FileText size={24} className="text-emerald-400" />;
+    if (n.includes("detection") || n.includes("anomaly")) return <Shield size={24} className="text-orange-400" />;
+    if (n.includes("gathering") || n.includes("requirements")) return <Shield size={24} className="text-cyan-400" />;
+    return <Code size={24} className="text-primary" />;
+};
 
 export const Skills = () => {
     const { t } = useLanguage();
 
     const skillCategories = [
         {
-            title: t.skills.categories.languages,
+            title: t.skills.categories.professional,
             skills: [
-                { name: "Python", img: py },
-                { name: "Java", img: java },
                 { name: "Kotlin", img: kotlin },
-                { name: "C++", img: cplus },
-                { name: "SQL", img: sql },
-                { name: "JavaScript", img: js },
+                { name: "Java", img: java },
+                { name: "Spring Boot", img: springboot },
+                { name: "C# (.NET)", img: null },
+                { name: "Apache Kafka", img: kafka },
+                { name: "PostgreSQL", img: postgres },
+                { name: "Docker", img: docker },
+                { name: "Git", img: git },
+                { name: "GitHub Actions", img: null },
+                { name: "TeamCity", img: null },
+                { name: "Linux", img: null },
             ]
         },
         {
-            title: t.skills.categories.frameworks,
+            title: t.skills.categories.academic,
             skills: [
+                { name: "Python", img: py },
+                { name: "JavaScript", img: js },
                 { name: "React", img: react },
                 { name: "Vue", img: vue },
                 { name: "Angular", img: angular },
                 { name: "Django", img: django },
-                { name: "Spring Boot", img: springboot },
+                { name: "MariaDB", img: mariadb },
+                { name: "C++", img: cplus },
             ]
         },
         {
-            title: t.skills.categories.tools,
+            title: t.skills.categories.methodologies,
             skills: [
-                { name: "Git", img: git },
-                { name: "Docker", img: docker },
-                { name: "Apache Kafka", img: kafka },
-                { name: "PostgreSQL", img: postgres },
-                { name: "MariaDB", img: mariadb },
+                { name: "Agile / Scrum", img: null },
+                { name: "Technical Documentation", img: null },
+                { name: "Anomaly Detection", img: null },
+                { name: "Requirements Gathering", img: null },
             ]
         }
     ];
@@ -74,6 +92,7 @@ export const Skills = () => {
                     <p className="text-gray-400 max-w-2xl mx-auto">
                         {t.skills.subtitle}
                     </p>
+                    <div className="h-1 w-20 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full mt-4" />
                 </motion.div>
 
                 <div className="space-y-16">
@@ -89,20 +108,30 @@ export const Skills = () => {
                                 {category.title}
                             </motion.h3>
 
-                            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
                                 {category.skills.map((skill, index) => (
                                     <motion.div
                                         key={index}
-                                        initial={{ opacity: 0, scale: 0.5 }}
+                                        initial={{ opacity: 0, scale: 0.8 }}
                                         whileInView={{ opacity: 1, scale: 1 }}
                                         transition={{ duration: 0.3, delay: (index * 0.05) + (catIndex * 0.1) }}
                                         viewport={{ once: true }}
-                                        className="group flex flex-col items-center justify-center p-4 bg-gray-800/30 rounded-xl hover:bg-gray-800/80 transition-all duration-300 border border-gray-700/50 hover:border-primary/50 hover:-translate-y-1"
+                                        className="group flex flex-col items-center justify-center p-5 bg-gray-800/20 rounded-2xl hover:bg-gray-800/60 transition-all duration-300 border border-gray-700/30 hover:border-primary/40 hover:-translate-y-1 shadow-lg hover:shadow-primary/5"
                                     >
                                         <div className="h-12 w-12 mb-3 flex items-center justify-center">
-                                            <img src={skill.img} alt={skill.name} className="max-h-full max-w-full group-hover:scale-110 transition-transform duration-300 drop-shadow-lg" />
+                                            {skill.img ? (
+                                                <img 
+                                                    src={skill.img} 
+                                                    alt={skill.name} 
+                                                    className="max-h-full max-w-full group-hover:scale-110 transition-transform duration-300 drop-shadow-lg" 
+                                                />
+                                            ) : (
+                                                <div className="w-12 h-12 rounded-2xl bg-gray-700/20 flex items-center justify-center group-hover:scale-110 transition-all duration-300 border border-gray-700/50">
+                                                    <SkillFallbackIcon name={skill.name} />
+                                                </div>
+                                            )}
                                         </div>
-                                        <h4 className="text-gray-400 font-medium text-sm group-hover:text-white transition-colors">
+                                        <h4 className="text-gray-400 font-medium text-sm text-center group-hover:text-white transition-colors">
                                             {skill.name}
                                         </h4>
                                     </motion.div>

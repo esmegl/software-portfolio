@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import { useLanguage } from "../context/LanguageContext";
 import blockchain from "../assets/images/cyber-security.png";
-import game from "../assets/images/game.svg";
+import biotech from "../assets/images/biotechnology.png";
 import backend from "../assets/images/backend.png";
-import web from "../assets/images/devops.png";
+import fintech from "../assets/images/fintech.png";
 import ai from "../assets/images/ai.png";
 import illustrations from "../assets/images/ilustration.svg";
 
@@ -11,11 +11,11 @@ export const About = () => {
     const { t } = useLanguage();
 
     const interests = [
+        { title: t.about.interests.backend, img: backend },
         { title: t.about.interests.cybersecurity, img: blockchain },
         { title: t.about.interests.ai, img: ai },
-        { title: t.about.interests.gamedev, img: game },
-        { title: t.about.interests.backend, img: backend },
-        { title: t.about.interests.devops, img: web },
+        { title: t.about.interests.biotech, img: biotech },
+        { title: t.about.interests.fintech, img: fintech },
         { title: t.about.interests.art, img: illustrations },
     ];
 
